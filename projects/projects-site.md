@@ -3,7 +3,7 @@ title: "This Site"
 description: "A simple site to showcase all of my development projects"
 date: 2024-09-08
 tags: ["typescript", "fresh", "deno"]
-url: "https://scrappydev.deno.com"
+url: "https://scrappy.deno.dev"
 repoUrl: "https://github.com/RealScrappyDev/projects-site"
 ---
 
