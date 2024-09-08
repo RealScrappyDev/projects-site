@@ -45,13 +45,17 @@ export function PageLayout(
         <meta property="twitter:url" content={url.href} />
       </Head>
       <div class="min-h-screen flex flex-col bg-light-bg dark:bg-dark-bg">
-        <div class="flex-grow flex flex-col max-w-6xl xl:w-full sm:mx-8 lg:mx-14 xl:mx-auto bg-light-fg dark:bg-dark-fg ring-1 ring-light-bg-ring dark:ring-dark-bg-ring">
-          <div class="w-full px-4 sm:px-16 lg:px-24">
-            <Header />
-            <main class="flex-grow py-8 sm:py-12">
-              {children}
-            </main>
-            <Footer />
+        <div class="flex-grow flex flex-col max-w-6xl xl:w-full sm:mx-8 lg:mx-14 xl:mx-auto">
+          <div class="flex-grow flex flex-col bg-light-fg dark:bg-dark-fg ring-1 ring-light-bg-ring dark:ring-dark-bg-ring">
+            <div class="w-full px-4 sm:px-16 lg:px-24 flex flex-col flex-grow">
+              <Header />
+              <main class="flex-grow py-8 sm:py-12">
+                {children}
+              </main>
+            </div>
+            <div class="w-full px-4 sm:px-16 lg:px-24">
+              <Footer />
+            </div>
           </div>
         </div>
       </div>

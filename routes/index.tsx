@@ -10,7 +10,7 @@ export default async function Home(props: PageProps) {
   return (
     <PageLayout url={url}>
       <h1 class="text-4xl font-bold mb-8">My Projects</h1>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {projects.map((project) => (
           <ProjectCard key={project.slug} project={project} />
         ))}
@@ -21,7 +21,7 @@ export default async function Home(props: PageProps) {
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <div class="bg-light-card dark:bg-dark-card rounded-lg shadow-md overflow-hidden">
+    <div class="bg-light-card dark:bg-dark-card rounded-lg shadow-md overflow-hidden w-full">
       <div class="p-6">
         <h2 class="text-2xl font-bold mb-2">{project.title}</h2>
         <p class="mb-4">{project.description}</p>
@@ -29,7 +29,7 @@ function ProjectCard({ project }: { project: Project }) {
           {project.tags.map((tag) => (
             <span
               key={tag}
-              class="bg-light-accent-faint dark:bg-dark-accent-faint text-light-accent dark:text-dark-accent px-2 py-1 rounded-full text-sm"
+              class="bg-light-icon-fill dark:bg-dark-icon-fill text-light-icon-stroke dark:text-dark-icon-stroke px-2 py-1 rounded-full text-sm"
             >
               {tag}
             </span>
@@ -45,9 +45,9 @@ function ProjectCard({ project }: { project: Project }) {
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-light-accent dark:text-dark-accent hover:underline"
+                class="inline-block px-3 py-1 bg-light-accent dark:bg-dark-accent text-white dark:text-white rounded-md hover:opacity-80 transition-opacity"
               >
-                View Project
+                Go to site
               </a>
             )}
             {project.repoUrl && (
@@ -55,7 +55,7 @@ function ProjectCard({ project }: { project: Project }) {
                 href={project.repoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-light-accent dark:text-dark-accent hover:underline"
+                class="inline-block px-3 py-1 bg-light-accent dark:bg-dark-accent text-white dark:text-white rounded-md hover:opacity-80 transition-opacity"
               >
                 GitHub
               </a>

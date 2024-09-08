@@ -2,7 +2,7 @@ import { GITHUB_URL, NAME, X_URL } from "../constants.ts";
 
 export function Footer() {
   return (
-    <footer class="mt-32 py-4">
+    <footer class="mt-32 py-16">
       <div class="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
         <div class="flex justify-center sm:justify-start space-x-4">
           <a
